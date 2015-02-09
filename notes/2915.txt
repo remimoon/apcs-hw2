@@ -1,0 +1,8 @@
+02/09/15
+
+getting out of a maze
+	greek method:thesues (string)
+	german method: hansel n gretel (bread crumbs)
+
+	recursive
+	base case-hit a wall, the end
