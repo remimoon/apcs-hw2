@@ -6,6 +6,13 @@ getting out of a maze
 
 	recursive
 	base case-hit a wall, the end
+	-need to put yourself in board
+
+2/10
+fundamental base algorithm for games which involes 2 independent entities
+
+
+---------------------------------------------------------------------------------
 
 import java.io.*;
 import java.util.*;
