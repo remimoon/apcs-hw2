@@ -41,8 +41,18 @@ fundamental base algorithm for games which involes 2 independent entities
 2/11
 maze code, can also be called search code/path finding code
 -blind search/ depth first search --> goes through a whole path before going back and trying another one if the first does not work
+-heuristic search --> always go to choice that is closer/the most likely choice
 
 state space search
-	state: the world, where you are
+	state space: the world, where you are, "state of existence of our world"
+		--> can also be called a graph
+		graph: collection of nodes, nodes represent state of maze (or people or time etc)
+	state transition: going from one state to another\
+	starting state: form you begin with, maybe scrambled
+	ending state: usually a solved form
+
+-branching factors: "If a tree branching factor is B, then at depth d there will be approximately B^d nodes."
+-we can use state space search to solve various problems 
+	ex) puzzles, rubix cubes
 
 

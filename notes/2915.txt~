@@ -1,3 +1,30 @@
+RECURSION
+
+2/5/15
+public void printme (int n){
+	if (n > 0) {
+		printme (n-1);
+		System.out.println (n);
+	}
+}
+
+*is increasing, we know this because recursive function is above the println
+
+basecase: where you stop and it's done --> ex) n=0
+reduction (recursion) step: allows us to reach base case, modifies the variable
+		--> ex) n-1
+
+factorial
+public int fact (int n){
+	if (n==0){
+		return 1;
+	} else {
+		return n * fact (n-1);
+	}
+}
+
+2/6/15
+
 02/09/15
 
 getting out of a maze
@@ -11,57 +38,21 @@ getting out of a maze
 2/10
 fundamental base algorithm for games which involes 2 independent entities
 
+2/11
+maze code, can also be called search code/path finding code
+-blind search/ depth first search --> goes through a whole path before going back and trying another one if the first does not work
+-heuristic search --> always go to choice that is closer/the most likely choice
 
----------------------------------------------------------------------------------
+state space search
+	state space: the world, where you are, "state of existence of our world"
+		--> can also be called a graph
+		graph: collection of nodes, nodes represent state of maze (or people or time etc)
+	state transition: going from one state to another\
+	starting state: form you begin with, maybe scrambled
+	ending state: usually a solved form
 
-import java.io.*;
-import java.util.*;
-public class Maze
-{
-	char[][] board;
-	int maxX;
-	int maxY;
+-branching factors: "If a tree branching factor is B, then at depth d there will be approximately B^d nodes."
+-we can use state space search to solve various problems 
+	ex) puzzles, rubix cubes
 
-	public Maze()
-	{
-	maxX=40;
-	maxY=20;
-	board = new char[maxX][maxY];
 
-	try {
-
-		Scanner sc = new Scanner(new File("maze.dat"));
-		int j=0;
-		while (sc.hasNext())
-		{
-			String line = sc.nextLine();
-			for (int i=0;i<maxX;i++)
-		{
-			board[i][j] = line.charAt(i);
-		}
-	j++;
-	}
-}
-	catch (Exception e)
-	{
-	}
-}
-
-	public String toString()
-	{
-	String s = "[2J\n";
-	for (int y=0;y<maxY;y++)
-	{
-		for (int x=0;x<maxX;x++)
-			s = s +board[x][y];
-		s=s+"\n";
-	}
-
-	return s;
-	}
-
-	public static void main(String[] args){
-		Maze m = new Maze();
-		System.out.println(m);
-	}
-}
