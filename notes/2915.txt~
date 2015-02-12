@@ -55,4 +55,17 @@ state space search
 -we can use state space search to solve various problems 
 	ex) puzzles, rubix cubes
 
+2/12
+chess as a state space search problem
+	state space: board and pieces
+	ending state: check mate or draw or etc\
+	state transition: pieces movin
+
+Implicit data structure
+
+BREAK HW: due friday of the week we get back (?)
+1) do diagnostic exam--> first as a test (time yourself), grade yourself, work through mistakes
+2) make variation of maze problem (use classcode as basecode)
+	knights tour: given and n x n board, find a seq of moves such that a knight can visit every square once without repetition ( n >= 5 ) (using the way a knight moves in chess)
+
 
