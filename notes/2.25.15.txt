@@ -1,0 +1,23 @@
+2/25/15
+sorting
+	selection sort- select nth smallest and swap w nth location
+	insertion- insert nth smallest so far into sublist of size n
+
+
+MERGE SORT
+
+mergesort (deck) {
+if (size(deck) == 1) {
+return deck;
+} else {
+ 	A = first half of deck;
+	B = second half of deck;
+	R1 = mergesort (A);
+	R2 = mergesort (B);
+	merge (R1, R2);
+}
+}
+
+A B sorted low to high
+ArrayList<integer>
+merge (ArrayList<integerA>, ArrayList<integerB>)
