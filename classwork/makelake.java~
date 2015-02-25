@@ -1,0 +1,4 @@
+public class makelake{
+
+    int R,C,E,N;
+
