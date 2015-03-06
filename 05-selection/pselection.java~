@@ -1,0 +1,42 @@
+public class pselection {
+
+    public int[] partition (int[] L, int SI, int EI){
+	int D = new int[L.length];
+
+	for (int i = 0; i < SI; i++){
+	    D[i] = L[i];
+	}
+
+	for (int i = EI; i < L.length; i++){
+	    D[j] = L[j];
+	}
+
+	int pivot = L[SI];
+	for (int i = 0; i < L.length; i++){
+	    if (L[i] < pivot){
+		D[SI] = L[i];
+		SI++;
+	    } if (L[i] > pivot){
+		D[EI] = L[i];
+		EI--;
+	    }
+	}
+    
+	return D;
+    }
+
+    public static void main (String[] args){
+	pselection a = new pselection();
+
+	int L = new int[10];
+	Random r = new Random();
+	for (int i = 0; i < 10; i++){
+	    L[i] = (r.nextInt(100));
+	}
+
+	System.out.println(L);
+
+	System.out.println(a.partition(L, 0, L.length - 1));
+    }
+}
+			   
