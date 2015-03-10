@@ -38,6 +38,20 @@ public class pselection {
 	return D;
     }
 
+    public int Select(int[] A, int k, int l, int h){
+	int pi, pval;
+	pi = partition (a,l,h);
+	pval = a[pi];
+	if (k==pi){
+	    return pval;
+	} else 
+	    if (k > pi){
+		return Select(A,k,pi+1,h);
+	    } else 
+		return Select(A,k,l,pi-1);
+    }
+    
+
     public static void main (String[] args){
 	pselection a = new pselection();
 
