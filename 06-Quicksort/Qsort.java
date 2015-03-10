@@ -1,17 +1,17 @@
 import java.util.*;
 import java.io.*;
-public class Qselect{
+public class Qsort{
 
 
     private int[] a,b;
     Random rnd = new Random();
     
 
-    public Qselect(){
+    public Qsort(){
 	this(20);
     }
 
-    public Qselect(int n){
+    public Qsort(int n){
 	Random r = new Random();
 	a = new int[n];
 	for (int i = 0; i < a.length; i++) {
@@ -79,12 +79,27 @@ public class Qselect{
 	return qselect(b,k,0,b.length-1);
     }
 
+    public int[] sort(int[] a, int l, int h){
+	int pi,pval;
+	pval = a[pi];
+	if (l >= h){
+	    return a;
+	}
+	if (l < h){ 
+	    pi = partition (a,l,h);
+	    sort(a, l, pi-1);
+	    sort(a, pi+1, h);
+	}
+	return a;
+    }
+
+
 
     public static void main(String[] args) {
-	Qselect q = new Qselect();
+	Qsort q = new Qsort();
 	System.out.println(q);
 	for (int i=0;i<5;i++) {
-	    System.out.print(q.select(i)+" ");
+	    System.out.print(q.sort(i)+" ");
 	}
 	System.out.println();
 	Arrays.sort(q.a);
