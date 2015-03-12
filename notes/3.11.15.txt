@@ -49,8 +49,37 @@ public class Driver {
 
 		n2.setData("watermelon");
 		System.out.println(n.getNext().getData());
+
+		n2.setNext(new Node("abc")); //create new node "abc"
+		System.out.println(n.getNext().getNext().getData()); //prints "abc"
+		
+		n.getNext().getNext().setNext(new Node("yabba"));
+
+		Node tmp = new Node ("start"); //sets tmp as first node
+		tmp.setNext(n);
+		n = tmp; //makes n refer to start of list
+
+		//prints out entire linked list
+		tmp = n;
+		while (tmp != null){
+			System.out.println(tmp);
+			tmp = tmp.getNext();
+		}
+
+		//OR
+
+		for (tmp = n; tmp != null; tmp = tmp.getNext()){
+			System.out.println(tmp);
+		}
 	}
+
 }
+
+**
+node tmp = n;
+while tmp != null
+ 	tmp = tmp.getNext();
+***
 
 
 
