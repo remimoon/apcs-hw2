@@ -1,0 +1,17 @@
+3/5/15
+
+*finding kth smallest
+1) find smallest element in arraylist, remove, and do that k times and then find smallest 
+--> time O(n^2)
+
+2) sort arraylist, find kth 
+--> time nlgn + k 
+
+3) *****
+   choose a pivot value, 
+   partition the list (rearrange the list so on one side there are all the values higher than pivot value, the other side lower), 
+   now pivot value is at its kth position, 
+   if it's kth then thats the number, 
+   if not just keep going
+
+select (kth, List, startindex, stopindex

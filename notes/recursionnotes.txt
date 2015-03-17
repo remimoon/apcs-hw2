@@ -1,0 +1,73 @@
+RECURSION
+
+2/5/15
+public void printme (int n){
+	if (n > 0) {
+		printme (n-1);
+		System.out.println (n);
+	}
+}
+
+*is increasing, we know this because recursive function is above the println
+
+basecase: where you stop and it's done --> ex) n=0
+reduction (recursion) step: allows us to reach base case, modifies the variable
+		--> ex) n-1
+
+factorial
+public int fact (int n){
+	if (n==0){
+		return 1;
+	} else {
+		return n * fact (n-1);
+	}
+}
+
+2/6/15
+
+02/09/15
+
+getting out of a maze
+	greek method:thesues (string)
+	german method: hansel n gretel (bread crumbs)
+
+	recursive
+	base case-hit a wall, the end
+	-need to put yourself in board
+
+2/10
+fundamental base algorithm for games which involes 2 independent entities
+
+2/11
+maze code, can also be called search code/path finding code
+-blind search/ depth first search --> goes through a whole path before going back and trying another one if the first does not work
+-heuristic search --> always go to choice that is closer/the most likely choice
+
+state space search
+	state space: the world, where you are, "state of existence of our world"
+		--> can also be called a graph
+		graph: collection of nodes, nodes represent state of maze (or people or time etc)
+	state transition: going from one state to another\
+	starting state: form you begin with, maybe scrambled
+	ending state: usually a solved form
+
+-branching factors: "If a tree branching factor is B, then at depth d there will be approximately B^d nodes."
+-we can use state space search to solve various problems 
+	ex) puzzles, rubix cubes
+
+2/12
+chess as a state space search problem
+	state space: board and pieces
+	ending state: check mate or draw or etc\
+	state transition: pieces movin
+
+Implicit data structure
+
+BREAK HW: due friday of the week we get back (?)
+1) do diagnostic exam--> first as a test (time yourself), grade yourself, work through mistakes
+2) make variation of maze problem (use classcode as basecode)
+	knights tour: given a n x n board, find a seq of moves such that a knight can visit every square once without repetition ( n >= 5 ) (using the way a knight moves in chess)
+	OR
+	end queens problem
+
+
