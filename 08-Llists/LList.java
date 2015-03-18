@@ -4,8 +4,8 @@ public class LList {
     private int len = 0;
     private Node dummy = new Node ("");
 
-    public void add(String s){
-	Node tmp = new Node(s);
+    public void add(int i){
+	Node tmp = new Node(i);
 	tmp.setNext();
 	l = tmp;
     }
@@ -30,8 +30,8 @@ public class LList {
 	return f;
     }
 
-    public void add(int i, String s){
-	Node x = new Node(s);
+    public void add(int i, int n){
+	Node x = new Node(n);
 	Node f = find(i);
 	if (i > 0){
 	    Node a = find(i-1);
@@ -49,7 +49,7 @@ public class LList {
 	for (int i = 0; i < n-1; i++){
 		T = T.getNext();
 	}
-	String s = T.getNext().getData();
+	int s = T.getNext().getData();
 	T.setNext(T.getNext().getNext());
 	return s;
 	}

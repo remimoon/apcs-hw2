@@ -126,6 +126,12 @@ public String remove(int n){
 	return s;
 }
 
+1) make arrayList of n
+	random ints between 1-10
+	use loop and get to sum all values
+2) do same w llist
+3) do same w built in llist
+
 
 
 
