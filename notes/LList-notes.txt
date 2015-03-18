@@ -111,6 +111,24 @@ public class LList {
 3) find --> get
 4) remove(index)
 
+-------------------------
+
+3/18/15- removing a node
+public String remove(int n){
+	if (n >= this.len || n < 0){
+		return;
+	node T = L;
+	for (int i = 0; i < n-1; i++){
+		T = T.getNext();
+	}
+	String s = T.getNext().getData();
+	T.setNext(T.getNext().getNext());
+	return s;
+}
+
+
+
+
 
 
 
