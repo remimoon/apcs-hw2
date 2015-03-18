@@ -2,10 +2,11 @@ public class LList {
    
     private Node l=null;
     private int len = 0;
+    private Node dummy = new Node ("");
 
     public void add(String s){
 	Node tmp = new Node(s);
-	tmp.setNext(l);
+	tmp.setNext();
 	l = tmp;
     }
 
@@ -19,7 +20,7 @@ public class LList {
 	return s;
     }
 
-    public Node find(int i){
+    public Node get(int i){
 	Node f = l;
 	int a = 0;
 	while (a < i){
@@ -41,7 +42,17 @@ public class LList {
 	    l = x;
     }
 
-    public void add(String s){
+  public String remove(int n){
+	if (n >= this.len || n < 0){
+		return;
+	node T = L;
+	for (int i = 0; i < n-1; i++){
+		T = T.getNext();
+	}
+	String s = T.getNext().getData();
+	T.setNext(T.getNext().getNext());
+	return s;
+	}
 
 		
 }
