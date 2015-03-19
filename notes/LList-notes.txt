@@ -132,6 +132,22 @@ public String remove(int n){
 2) do same w llist
 3) do same w built in llist
 
+--------------------------
+3/19/15
+"piggybacking pointers"
+public boolean remove(int n) {
+	T = L.getNext();
+	T2 = L;
+	while (T != null){
+		if (T.getData() == n){
+			T2.setNext(T.getnext())
+			return true;
+			T2 = T;
+			T = T.getNext()
+		}
+		return false
+	}
+}
 
 
 
