@@ -15,4 +15,5 @@ public class LLit {
 	int s = l.getData();
 	l = l.getNext();
 	return s;
+    }
 }

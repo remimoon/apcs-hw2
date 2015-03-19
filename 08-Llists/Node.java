@@ -9,7 +9,7 @@ public class Node {
     }
 
     public void setData(int i){
-	data = s;
+	data = i;
     }
 
     public int getData() {
