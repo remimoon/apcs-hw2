@@ -134,7 +134,7 @@ public String remove(int n){
 
 --------------------------
 3/19/15
-"piggybacking pointers"
+"piggybacking p
 public boolean remove(int n) {
 	T = L.getNext();
 	T2 = L;

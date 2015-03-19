@@ -1,13 +1,23 @@
 public class LList {
    
-    private Node l=null;
+    private Node l;
     private int len = 0;
     private Node dummy = new Node ("");
 
+    puublic Llist(){
+	l = new Node();
+    }
+
+    public Llit getLit(){
+	LLit llit = new Llit(l);
+	return llit;
+    }
+
+
     public void add(int i){
 	Node tmp = new Node(i);
-	tmp.setNext();
-	l = tmp;
+	tmp.setNext(l.getNext());
+	l.setNext(tmp);
     }
 
     public String toString(){
