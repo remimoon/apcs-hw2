@@ -41,7 +41,7 @@ public class LList {
 	if (i == 0)
 	    l = x;
     }
-
+    /*
   public String remove(int n){
 	if (n >= this.len || n < 0){
 		return;
@@ -53,20 +53,22 @@ public class LList {
 	T.setNext(T.getNext().getNext());
 	return s;
 	}
+  }
+    */
 
-	public boolean remove(int n) {
-	    T = L.getNext();
-	    T2 = L;
-	    while (T != null){
-		if (T.getData() == n){
-		    T2.setNext(T.getnext());
-		    return true;
-			}
-		return false;
-		T2 = T;
-		T = T.getNext();
+    public boolean remove(int n) {
+	T = L.getNext();
+	T2 = L;
+	while (T != null){
+	    if (T.getData() == n){
+		T2.setNext(T.getnext());
+		return true;
 	    }
+	    return false;
+	    T2 = T;
+	    T = T.getNext();
 	}
+    }
 
 		
 }
