@@ -1,0 +1,31 @@
+--------------------------------------STACK-------------------------------------
+Last in, First out (LIFO)
+take from top, place on top
+not built into a language but is a concept
+myStack<Integer> s = new myStack<Integer>();
+- create an empty stack
+- s|2
+//ALWAYS PRESENT IN STACKS
+s.push(10)
+- put a 10 on the top of stack s
+- s|10
+s.push(5)
+- s|10|5
+i = s.pop()
+- remove the item from the top of stack s and return it
+- s|10
+- i = 5
+//USUALLY PRESENT IN STACKS
+s.empty()
+- checks if s is empty, returns true or false
+s.peek(); s.top();
+- returns but doesn't remove the top element on the stack
+//SOMETIMES PRESENT IN STACKS
+s.size()
+"cheat"
+other methods
+ASSIGNMENT
+- make a class called mystack
+- operations: push, pop, empty, peek
+- preferably using generics
+- internally to be stored in a linked list of nodes
