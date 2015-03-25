@@ -1,0 +1,10 @@
+3/25/15
+
+FIFO - first in first out
+     - queue
+
+q.enqueue(x) --> add x to the back of the queue
+q.dequeue( ) --> removes element in the front
+q.head() --> returns but doesnt remove the front
+q.foot() --> returns but doesnt remove the back
+q.empty() --> tests if empty
