@@ -47,7 +47,7 @@ public class myStack<E>{
 	System.out.println(s);
 	System.out.println(s.top());
 	int i = s.pop();
-	System.out.println("popped:" + i + " list:\n" + s);
+	System.out.println("popped:" + i + "\n list: \n" + s);
 	System.out.println(s.empty());
 	s.pop();
 	s.pop();
