@@ -1,3 +1,4 @@
+//worked w lian wong
 public class myQueue<E>{
 
     public Node<E> start;
