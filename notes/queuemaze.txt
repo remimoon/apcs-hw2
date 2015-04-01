@@ -21,6 +21,10 @@ breadth first search
 		current = q.dequeue()
 		if (board[current.getx()][current.gety()] == exit)
 		for (each unvisited neighbor n of current):
-			q.enqueue(n);
+			q.enqueue(n); //mark n as visited, add n to frontier
 
 	node --> x,y,char
+
+4/1/15
+
+
