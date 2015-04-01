@@ -1,0 +1,26 @@
+3/31/15
+
+maze solver
+	2d array of char
+	$ exit, # path, ' wall, z me, . visited
+	recursively solved, in each possible direction
+	depth first search ---> go as deep into the problem as you can, and then go back
+				problem? could take a long time, may not use the most efficient way first
+				
+
+	recursive stack ---> stores how to get back
+
+breadth first search
+	using queue
+	radial scanner
+	frontier (the unknown)
+	-put start node on frontier and mark as visited (enqueue (startnode))
+	-pull off first node
+
+	while (! q.empty()):
+		current = q.dequeue()
+		if (board[current.getx()][current.gety()] == exit)
+		for (each unvisited neighbor n of current):
+			q.enqueue(n);
+
+	node --> x,y,char
