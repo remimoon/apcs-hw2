@@ -3,6 +3,7 @@ import java.util.*;
 public class Maze2
 {
 
+    private queue q = new queue();
     private char[][] board;
     private int maxX;
     private int maxY;
@@ -12,6 +13,7 @@ public class Maze2
     private char exit='$';
     private char visited = '.';
     private boolean solved = false;
+
 
     public void delay(int n){
 	try {
@@ -58,6 +60,11 @@ public class Maze2
       solved - instance variable to indicate we're done
     */
 
+    public Node newNode(int x, int y){
+	Node n = new Node(x,y);
+	return n;
+    }
+
     public void solve(int x, int y){
 	if (board[x][y]==wall ||
 	    board[x][y]==me ||
@@ -71,11 +78,17 @@ public class Maze2
 	}
 	delay(100);
 	System.out.println(this);
-	board[x][y]=me;
-	solve(x+1,y);
-	solve(x-1,y);
-	solve(x,y+1);
-	solve(x,y-1);
+	board[x][y]=me;       
+	q.enqueue(newNode(x+1,y));
+	q.enqueue(newNode(x-1,y));
+	q.enqueue(newNode(x,y+1));
+	q.enqueue(newNode(x,y-1));
+	while (! q.empty()){
+	    if (q.getData() == exit){
+		return;
+	    }
+	    q.dequeue();
+	}		
 	if (!solved){
 	    board[x][y]=visited;
 	}
