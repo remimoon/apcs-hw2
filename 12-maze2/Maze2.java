@@ -3,7 +3,6 @@ import java.util.*;
 public class Maze2
 {
 
-    private queue q = new queue();
     private char[][] board;
     private int maxX;
     private int maxY;
@@ -64,7 +63,7 @@ public class Maze2
 	Node n = new Node(x,y);
 	return n;
     }
-
+    /*
     public void solve(int x, int y){
 	if (board[x][y]==wall ||
 	    board[x][y]==me ||
@@ -93,11 +92,74 @@ public class Maze2
 	    board[x][y]=visited;
 	}
     }
+    */
+
+    public void bfs(int x, int y){
+	Frontier f = new Frontier();
+
+	//add intial node to frontier
+	f.add(new Node(x,y));
+
+	board[x][y] = 'x';
+	Node current = null;
+	int tx=0, ty=0; //tempx and tempy
+
+	while(!f.isEmpty()){
+	    current = f.remove();
+	    int cx = current.getx();
+	    int cy = current.gety();
+
+	    board[cx][cy] = 'z';
+	    Node tmp;
+
+	    tx = cx+1;
+	    ty = cy;
+	    if(board[tx][ty] == '#' || board[tx][ty] == '$'){
+		tmp = new Node(tx,ty);
+		tmp.setPrev(current);
+		f.add(tmp);
+	    }
+
+	    tx = cx-1;
+	    ty = cy;
+	    if(board[tx][ty] == '#' || board[tx][ty] == '$'){
+		tmp = new Node(tx,ty);
+		tmp.setPrev(current);
+		f.add(tmp);
+	    }
+
+	    tx = cx;
+	    ty = cy+1;
+	    if(board[tx][ty] == '#' || board[tx][ty] == '$'){
+		tmp = new Node(tx,ty);
+		tmp.setPrev(current);
+		f.add(tmp);
+	    }
+
+	    tx = cx;
+	    ty = cy-1;
+	    if(board[tx][ty] == '#' || board[tx][ty] == '$'){
+		tmp = new Node(tx,ty);
+		tmp.setPrev(current);
+		f.add(tmp);
+	    }
+
+	delay(100);
+	System.out.println(this);
+	}
+
+	//recover path
+	for (Node p = current.getPrev(); p != null; p = p.getPrev()){
+	    board[p.getx()][p.gety()] = 'P';
+	    delay(100);
+	    System.out.println(this);
+	}
+    }
 
     public static void main(String[] args){
 	Maze2 m = new Maze2();
 	System.out.println(m);
-	m.solve(1,1);
+	m.bfs(1,1);
 	System.out.println(m);
     }
 }
