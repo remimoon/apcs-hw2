@@ -1,0 +1,13 @@
+4/14/15
+
+Heurisitc: more informed way to guess the "best" way.
+	ex) for the maze, each node would have a priority, add to frontier based on priority
+
+Best First Search: when you add each node to frontier, first assign a priority and then add to the frontier which is a priority Queue (Ordered best)
+
+Maze Heuristics 
+	-distance formula (euclidean)
+	-manhattan (taxi-cab distance)
+
+A* (actual algorithm used by self driving cars)
+priority of Node n = cost to get to node n + estimated distance to goal
