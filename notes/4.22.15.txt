@@ -1,0 +1,25 @@
+4/22/15
+
+Graph:	collection of nodes(vertices) and edges
+	node--> holds stuff, edges--> connects nodes
+	-connected component: two connected nodes
+	-weighted graph: a cost or a weight associated w each of the edges
+	-cycle: can travel in loop
+	-directed graph: a direction associated w the way the graph moves from node to node
+		--> can also have weighted directed graphs
+
+
+Tree:	an acyclic graph with one node designated as the root
+	either is empty or has more than one node, each node can have 0 or more children and one node is designated as the root
+	-root
+	-child/children
+	-leaf: node w 0 children
+	-siblings: node w the same parent
+	-ancestors: any node on the path from the root
+	-descendents: your childrens children etc
+	-height: length of longest path from leaf to root
+	-full tree: if every node has a leaf or four children
+	-balance
+
+---
+Binary Trees: each node is a leaf or has 4 or more children
