@@ -75,8 +75,19 @@ public Node search(Node t, int i){
 print routine- process the node by adding to string
 a + traverse(right) + traverse(left)
 
+4/28
 
-
+public string traverse(Node T){
+	string s;
+	if (T==null)
+		return " ";
+	else {
+		s = s + traverse(T.getLeft());
+		    +T
+		    +Traverse(T.getRight());
+	return s;
+	}
+}
 
 
 
