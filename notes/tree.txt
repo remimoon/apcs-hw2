@@ -59,8 +59,21 @@ insert as a new leaf
 	when lead pointer (T) gets to null, piggyback (T2) will be at the node before insertion point
 	insert new node to left or right of T2 or appropriate
 
+-------
+4/27/15
 
+public Node search(Node t, int i){
+	if (t==null || t.getData()--i){
+		return t;
+	} else { if (i<t.getData()){
+		return search(t.getLeft(),i);
+	} else {
+		return search(t.getRight(),i);
+	}
+}
 
+print routine- process the node by adding to string
+a + traverse(right) + traverse(left)
 
 
 
