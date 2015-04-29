@@ -58,6 +58,27 @@ public class BST{
 	}
     }
 
+    public void remove(int data){
+	Node t = r;
+	Node t2 = null;
+	if (r==null){
+	    r=n;
+	    return;
+	}
+	while (t!=null){
+	    t2 = t;
+	    if (t.getData()==i)
+		return;
+	    else if (t.getData() < i)
+		t=t.getRight();
+	    else if (t.getData() > i)
+		t=t.getLeft();
+	    else
+		return;
+	}
+	if (t.getRight() == null && t.getLeft() == null){
+	    if (t.getData() 
+
     public static void main(String[] args){
 	BST t = new BST();
 	Random r = new Random();
