@@ -1,7 +1,10 @@
 import java.io.*;
 import java.util.*;
+
 public class BST{
+
     Node r;
+
     public Node search(Node t, int i){
 	if (t==null || t.getData()==i){
 	    return t;
@@ -12,6 +15,7 @@ public class BST{
 	    return search(t.getRight(),i);
 	}
     }
+
     public String search(int i){
 	Node n = search(r,i);
 	if (n==null){
@@ -20,6 +24,7 @@ public class BST{
 	    return n.toString();
 	}
     }
+
     public void insert(int i){
 	Node n = new Node(i);
 	Node t2=null;
@@ -44,6 +49,15 @@ public class BST{
 	else
 	    t2.setLeft(n);
     }
+
+    public String traverse(Node t){
+	if (t == null){
+	    return "";
+	} else {
+	    return traverse(t.getLeft()) + t.getData() + "," + traverse(t.getRight());
+	}
+    }
+
     public static void main(String[] args){
 	BST t = new BST();
 	Random r = new Random();
