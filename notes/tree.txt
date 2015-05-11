@@ -107,10 +107,37 @@ removing
 		-copy the data from L into T
 		remove(T.getLeft(), L.getData())
 
+-------------------
+4/30
+runtime
+
+search-	lg(n) if the tree is full/balanced
+	o(n) if the tree degenerates into a list
+remove-	same as search
+insert-	same as search
+traverse- o(n) w respect to the # of nodes n
+
+**splay tree: tries to keep tree more in balance, when searching for a node it rebalances the tree and brings your node to the top
+
+-----------------
+5/11/15
+
+design algorithm to determine the # of nodes in a binary tree
+-base case: return 0 if null
+-recursive reduction: 
+	return 1 + #ofnodes (left)
+		 + #ofnodes (right)\
+public int nodecount(Node t)
+	if (T == null)
+		return 0
+	else
+	return 1 + nodecount(t.getleft) + nodecount(t.getright)
 
 
-
-
+1)max value from a tree
+2)height
+3)longest leaf to leaf path
+4)split dupes (whenever a parent and child are the same node insert one inbetween that is one less)
 
 
 
