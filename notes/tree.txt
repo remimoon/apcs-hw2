@@ -139,6 +139,74 @@ public int nodecount(Node t)
 3)longest leaf to leaf path
 4)split dupes (whenever a parent and child are the same node insert one inbetween that is one less)
 
+-------------------------
+5/12/15
+
+maxnode (Node T){
+	if (t == null){
+		return smallest value
+	} else {
+		max(maxnode(t.getleft()), maxNode(t.getRight()), t.getData())
+	}
+}
+
+height
+maxnode(node t){
+	if (t== null){
+		return 0;
+	} else {
+		return 1 + max(height(t.getleft()), height(t.getright())
+
+diameter
+diam (node t){
+	if (t== null)
+		return 0;
+	else {
+		PL1 = height(t.getLeft()) + height(t.getRight()) + 2
+		PL2 = diam(t.getleft())
+		PL3 = diam (t.getright())
+		return max(pl1, pl2, pl3)
+
+
+----------------
+           3
+      7            12
+  5      8       17   19
+16 22  13 21   30
+
+binary tree, children > parent, full as possible left to right, MIN HEAP
+(could also have a max heap)
+
+
+remove min
+1) remove min
+2) replace w lowest rightest value
+3)push down
+	swap the root w its smaller child and continue down until we're done
+
+insert
+1) add new lowest leftest node and sift up
+
+
+find min: o(1)
+remove min/pushdown: o(lgn)
+insert: o(lgn)
+
+-if you number each node, given node n, n's children are 2n 2n+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
