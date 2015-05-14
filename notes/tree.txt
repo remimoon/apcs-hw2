@@ -192,7 +192,18 @@ find min: o(1)
 remove min/pushdown: o(lgn)
 insert: o(lgn)
 
--if you number each node, given node n, n's children are 2n 2n+1
+-if you number each node, given node n, n's children are 2n(left) 2n+1 (right)
+
+-------------------------
+5/14/15
+
+1) convert to heap O(n)
+2) heapsort O(n lgn)
+
+O(1) find min
+O(lg n) insert
+O(lg n) remove min
+reduce key --> 1) find node, 2) adjust value (priority), 3) push down or sift up
 
 
 
