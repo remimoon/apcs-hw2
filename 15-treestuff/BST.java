@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class BST{
+public class Tree{
 
     Node r;
 
@@ -135,7 +135,7 @@ public class BST{
 	    }
 
     public static void main(String[] args){
-	BST t = new BST();
+	Tree t = new Tree();
 	Random r = new Random();
 	for (int i = 0; i < 20; i ++){
 	    int z = r.nextInt(100);
