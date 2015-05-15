@@ -90,7 +90,49 @@ public class BST{
 	}
     }
 
-    public int max(
+    public int maxValue(Node t) {
+	if (t.getNext() == null) {
+	    return t.getData();
+	} else {
+	    return Math.max(maxValue(t.getLeft()), maxValue(t.getRight());
+			    }
+	}
+
+	public int height(Node t) {
+	    if (t != null) {
+		return 0;
+	    } else {
+		return 1 + Math.max(height(t.getLeft()) + height(t.getRight()));
+	    }
+	}
+
+
+	public int longest(Node t) {
+	    if (t == null) {
+		return 0;
+	    }
+	    else {
+		int r = 1 + height(t.getLeft()) + height(t.getRight());
+		int left = longest(t.getLeft());
+		int right = longest(t.getRight());
+		return Math.max(r, left, right);
+	    }
+
+	    public void splitDupes(Node t) {
+		if (t != null) {
+		    if (t.getData() == t.getLeft().getData()) {
+			Node after = t.getLeft();
+			t.setLeft(new Node(t.getData() - 1));
+			t.getLeft().setLeft(after);
+		    } else if (t.getData() == t.getRight().getData()) {
+			Node after = t.getRight();
+			t.setRight(new Node(t.getData() - 1));
+			t.getLeft().setLeft(after);
+		    }
+		    splitDupes(t.getLeft());
+		    splitDupes(t.getRight());
+		}
+	    }
 
     public static void main(String[] args){
 	BST t = new BST();
